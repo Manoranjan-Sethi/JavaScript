@@ -16,3 +16,21 @@ console.log(_uwq);
 
 var $qas = 23;
 console.log($qas);
+
+
+//pre-increment
+//++w  or --w
+
+// post-increment
+//w++ or w++
+
+var x = 5;
+var y = ++x;     // first operate then assign
+console.log(x);  // 6
+console.log(y);  // 6
+console.log("--------");
+
+var x = 10;
+var y = x++;    // first assign then operate
+console.log(x); // 11
+console.log(y); // 10
