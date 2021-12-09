@@ -28,16 +28,18 @@ while(start <10){
 }
 console.log("-----------");
 
-//continue
-var f = 0;
-while(f <10){
+//Prime Number
+var num = 1;
+var count = 0;
 
-  if(f == 5){
-    continue; 
+for(var i =1;i<=num;i++){
+  if(num%i==0){
+    count++;
   }
-  console.log("QAZ",f);
-  f++;
 }
-
-
-//
+if(count==2){
+  console.log(num,"Number is prime");
+}
+else{
+  console.log(num,"Not-Prime");
+}
