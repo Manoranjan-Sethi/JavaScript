@@ -24,3 +24,41 @@ for(var i = 1; i<10;i++){
   bag = bag +i;
 }
 console.log(bag);  //print in a line
+
+//
+console.log("---------")
+
+
+//square printing
+var num=5;
+for(var i = 1;i<=num;i++){
+  var s="";
+  for(var j = 1;j<=num;j++){
+      s=s+j+" ";
+  }
+  console.log(s);
+}
+console.log("------------")
+// //Question
+// // Print all the numbers in the range from [1, N*N], as shown in the problem statement, such that there areNnumbers on each line
+// //input(N)= 4          
+// // output = 1 2 3 4 
+//             5 6 7 8 
+//             9 10 11 12 
+//             13 14 15 16 
+ // or
+// input = 3
+// output = 1 2 3
+//          4 5 6
+//          7 8 9
+
+var N=4;
+var c = 1;
+    for(var i = 0;i<N;i++){
+        let s = "";
+        for(var j = 0;j<N;j++){
+            s = s+c+" ";
+            c++;
+        }
+        console.log(s);
+    }
