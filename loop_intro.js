@@ -43,3 +43,67 @@ if(count==2){
 else{
   console.log(num,"Not-Prime");
 }
+
+//Divisibly by K
+
+var max = 7;
+var k = 2;
+for(var i = 1;i<=max;i++){
+  if(i%k==0){
+    console.log(i);
+  } 
+}
+
+//Divisibly by K II
+var max = 7;
+var k = 2;
+var count = 0;
+for(var i = 1;i<=max;i++){
+  if(i%k==0){
+    count= count+i;
+  } 
+}
+console.log(count);
+
+//Masai Divisors
+var l = 1;
+var r = 10;
+var k = 3;
+
+var count =0;
+for(var i = l;i<=r;i++){
+  if(i%k==0){
+    count++;
+  }
+}
+console.log(count);
+
+//Find Sum of Multiples
+var x = 3;
+var k=10;
+var y = 5;
+
+var j=0;
+var sum = 0;
+for(var i =x;i<=k;i++){
+  j= i*x;
+  if(j%y==0){
+    sum = sum+j;
+  }
+}
+console.log(sum);
+
+//Identify Prime
+var num = 13;
+var count = 0;
+for(var i =1;i<=num;i++){
+  if(num%i==0){
+    count++;
+  }
+}
+if(count==2){
+  console.log("Prime Number");
+}
+else{
+  console.log("Composite Number");
+}
