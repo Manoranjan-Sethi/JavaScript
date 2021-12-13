@@ -1,7 +1,7 @@
 # JavaScript
 
 Basics of JavaScript:-
--Variable Declaration
+- Variable Declaration
 -Let
 -Const
 -String indexing
@@ -13,12 +13,12 @@ Basics of JavaScript:-
 -If else statement
 -Ternary Operator
 -&& || operator
-●    Nested if else
-●    If elseif else
-●    Switch statement
-●    While loop
-●    While loop examples
-●    For loop
-●    For loop examples
-●    Break and continue keyword
-●    Do
+-Nested if else
+-If elseif else
+-Switch statement
+-While loop
+-While loop examples
+-For loop
+-For loop examples
+-Break and continue keyword
+-Do While loop
