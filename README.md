@@ -1,4 +1,4 @@
-# JavaScript
+# JavaScript Mastery
 
 Basics of JavaScript:-
 - Variable Declaration
