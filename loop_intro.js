@@ -29,7 +29,7 @@ while(start <10){
 console.log("-----------");
 
 //Prime Number
-var num = 1;
+var num = 11;
 var count = 0;
 
 for(var i =1;i<=num;i++){
@@ -107,7 +107,16 @@ if(count==2){
 else{
   console.log("Composite Number");
 }
-//
+
+
+//reverse numbers
+var num =1453;
+num = num+"";
+    var bag = "";
+    for(var i=num.length-1 ; i>=0;i--){
+        bag+=num[i];
+    }
+    console.log(bag);
 
 
 
