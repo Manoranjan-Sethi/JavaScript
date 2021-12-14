@@ -4,21 +4,23 @@ Basics of JavaScript:-
 - Variable Declaration
 - Let
 - Const
-- String indexing
-- String methods
-- Template strings
-- Null, undeﬁned, BigInt, typeof
+- String indexing and Methods
 - Booleans and Comparison Operator
-- Truthy and Falsy Values
 - If else statement
-- Ternary Operator
 - && || operator
 - Nested if else
-- If elseif else
-- Switch statement
+- If else if else
 - While loop
-- While loop examples
 - For loop
-- For loop examples
 - Break and continue keyword
-- Do While loop
+
+Arrays:-
+- intro
+- Push pop shift unshift
+- Primitive vs reference data types
+- Clone array & spread operator
+- For loop
+- use const for creating arrays
+- For of loop
+- For in loop
+- Array destructuring
