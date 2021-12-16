@@ -1,6 +1,6 @@
 # JavaScript Mastery
 
-Basics of JavaScript:-
+Basics of JavaScript :-
 - Variable Declaration
 - Let
 - Const
@@ -16,7 +16,7 @@ Basics of JavaScript:-
 
 
 
-Arrays:-
+Arrays :-
 - intro
 - Push pop shift unshift
 - Primitive vs reference data types
