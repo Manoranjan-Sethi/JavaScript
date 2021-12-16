@@ -14,6 +14,8 @@ Basics of JavaScript:-
 - For loop
 - Break and continue keyword
 
+
+
 Arrays:-
 - intro
 - Push pop shift unshift
@@ -24,3 +26,4 @@ Arrays:-
 - For of loop
 - For in loop
 - Array destructuring
+- Problems
