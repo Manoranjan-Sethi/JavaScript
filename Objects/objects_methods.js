@@ -116,6 +116,7 @@ e_commerce.total_price();
 //Problem3
 //array already declared put them into an object
 var products = ["imac","iphone","ipad"];
+var quantity = [2, 3, 1]
 var prices = [500000,100000,40000];
 
 var output = [];
@@ -124,6 +125,7 @@ for(var i=0; i<products.length; i++){
 
     var obj = {     //object created
         name : products[i],
+        quantity: quantity[i],
         price : prices[i]
     };
 

@@ -9,4 +9,4 @@ let item2 =[];
 for (let i = 0; i < item1.length; i++){
   item2.push(item1[i].toUpperCase());
 }
-console.log(item2);
+console.log(item2)
