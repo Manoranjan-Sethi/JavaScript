@@ -27,3 +27,10 @@ Arrays :-
 - For in loop
 - Array destructuring
 - Problems
+- Methods
+
+
+Objects :-
+- intro
+- object itteration
+- objects methods
