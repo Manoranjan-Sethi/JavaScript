@@ -142,15 +142,17 @@ console.log(output);
 // s -> 1
 // i -> 1
 
-var name1 = "masai";
-var output = {};
+
+//in objects we know that we cant have two keys same 
+var name1 = "masaia";
+var output = {}; 
 
 for(var i=0; i<name1.length; i++){
-    var char = name1[i];
+    var char = name1[i]; // at first name1 will be of 0th index which is stored in char i.e. "m"
 
-    if(output[char] == undefined){
+    if(output[char] == undefined){  //when the object is empty, here output["m"] is undefined so 1 will get stored there
         output[char] = 1;
-    }else{
+    }else{                           //for occurence of the element assigned 1 this else will add 1 to it
         var prevValue = output[char];
         output[char] = prevValue+1;
     }
@@ -160,3 +162,66 @@ for(var i=0; i<name1.length; i++){
 for(key in output){
     console.log(key, "->", output[key]);
 }
+
+
+// Sample Input
+// 5
+
+// Output
+// a-1
+// b-2
+// c-3
+// d-4
+// e-5
+
+var N=7;
+
+var alphabets = "abcdefghijklmnopqrstuvwxyz";
+    
+    var x = 1;
+    
+    var obj = {};
+    
+    for (var i=0;i<N; i++){
+        obj[alphabets[i]] = x;
+        x=x+1;
+    }
+    
+    for(key in obj){
+        console.log(key+"-"+obj[key]);
+    }
+
+//
+
+var data = {
+    products : ["Rice", "Dal", "Salt"],
+    qauntity : [2, 3, 1],
+    price : [60, 50, 20],
+
+    total_price : function(){
+                var sum= 0;
+                for(var i=0; i<this.qauntity.length; i++){
+                sum= sum + this.qauntity[i] * this.price[i];
+                }  
+                console.log(sum);
+                }
+}
+
+data.total_price();
+
+// 
+var data = {
+
+    name: ["Nrupul", "Prateek", "Aman", "Albert", "Yogesh"],
+    age : [32, 30, 26, 28, 44],
+    
+  
+    q : function(){
+                  for(var i=0; i<this.age.length; i++){ 
+                    if(this.age[i]>30){
+                      console.log(this.name[i]);
+                     }
+                    } 
+                  }
+  }
+  data.q();
