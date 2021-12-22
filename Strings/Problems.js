@@ -8,3 +8,9 @@ for (var i = a.indexOf("a"); i!==-1; i=a.indexOf("a",i + 1)){
       count++;
 }
 console.log(count);
+
+
+
+var str = "XI";
+
+if(s)

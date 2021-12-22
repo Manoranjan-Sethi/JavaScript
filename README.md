@@ -26,6 +26,7 @@ Arrays :-
 - For of loop
 - For in loop
 - Array destructuring
+- 2D Array
 - Problems
 - Methods
 
