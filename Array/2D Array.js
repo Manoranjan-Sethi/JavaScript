@@ -117,9 +117,9 @@ for(var i=0;i<items[0].length; i++){
   }
 }
 
-var a = [1,2,3,4];
-var b = [4,5,6,7];
-var c = [7,8,9,10];
+// var a = [1,2,3,4];
+// var b = [4,5,6,7];
+// var c = [7,8,9,10];
 //print 1,2,3,4,7,6,5,4,7,8,9,10   snake pattern
 //here i is running for row and j for columns
 //here j is running from 0 to 3 for every even value of i and 3 to 0 for odd value
@@ -137,3 +137,104 @@ for(var i=0;i<items.length; i++){
     }
   }
 }
+
+
+//1
+// Sample Input 
+//N=row=5,M=col=5                          
+// 4 7 1 1 7
+// 8 9 9 6 1
+// 6 4 9 5 1
+// 7 7 4 7 7
+// 8 6 2 5 5
+
+// Sample Output
+// 7 1 1 7 4 8 9 9 6 1 1 5 9 4 6 7 7 4 7 7 5 5 2 6 8
+
+var matrix =[[4,7, 1, 1, 7],
+            [8 ,9, 9, 6, 1],
+            [6, 4, 9, 5, 1],
+            [7, 7, 4, 7, 7],
+            [8 ,6 ,2 ,5, 5]]
+var N=5;
+var M=5;
+var bag="";
+    for(var i=0;i<N;i++){
+        
+        if(i%2==1){
+            for(var j=0;j<M;j++){
+                bag=bag+matrix[i][j]+" ";
+            }
+        }else{
+            for(var j=M-1;j>=0;j--){
+                bag=bag+matrix[i][j]+" ";
+            }
+        }
+        
+    }
+    console.log(bag);
+
+
+
+//2 Specific Diagonals
+//R=row=3,C=col=3,k=int
+//Sample input 1
+// R3 C3
+// 1 2 3
+// 4 5 6
+// 7 8 9
+// K6
+
+//Output
+// 2 6
+// 6 8
+
+//Sample input 2
+// 3 3
+// 1 2 3
+// 4 5 6
+// 7 8 9
+// 5
+
+//output
+// 1 5 9
+// 3 5 7
+
+
+var matrix=[[1,2,3]
+            [4,5,6],
+            [7,8,9]];
+var R=3;
+var C = 3;
+var K=6;
+
+var diff=0;
+var sum=0;
+for(var i=0;i<R;i++){
+  
+  for(var j=0;j<C;j++){
+      
+      if(matrix[i][j]==K){
+          diff=i-j;
+          sum=i+j;
+      }
+  }
+ 
+}
+var LR =[];
+var RL = [];
+for(var i=0;i<R;i++){
+  
+  for(var j=0;j<C;j++){
+      
+      if(diff==i-j){
+          LR.push(matrix[i][j]);
+      } 
+      if(sum==i+j){
+          RL.push(matrix[i][j]);
+      }
+  }
+ 
+}
+console.log(LR.join(" "));
+console.log(RL.join(" "));

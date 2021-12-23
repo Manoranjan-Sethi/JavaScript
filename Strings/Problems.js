@@ -12,5 +12,3 @@ console.log(count);
 
 
 var str = "XI";
-
-if(s)
