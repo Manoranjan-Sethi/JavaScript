@@ -176,6 +176,8 @@ var bag="";
 
 
 
+
+    
 //2 Specific Diagonals
 //R=row=3,C=col=3,k=int
 //Sample input 1
@@ -201,7 +203,7 @@ var bag="";
 // 3 5 7
 
 
-var matrix=[[1,2,3]
+var matrix=[[1,2,3],
             [4,5,6],
             [7,8,9]];
 var R=3;
