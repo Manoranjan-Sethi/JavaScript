@@ -14,3 +14,9 @@ console.log("value of myvar2", myvar2);
 let [myvar3,myvar4] = array;
 console.log("value of myvar1", myvar3);
 console.log("value of myvar2", myvar4);
+
+
+for(var i = 0; i <array.length; i++){
+[array[i],array[i+1]]=[array[i+1],array[i]];
+}
+console.log(array);

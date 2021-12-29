@@ -240,3 +240,22 @@ for(var i=0;i<R;i++){
 }
 console.log(LR.join(" "));
 console.log(RL.join(" "));
+
+
+
+//product of column
+
+var arr = [[1,2],
+          [3,4],
+          [5,6]];
+
+
+for (var i = 0; i < arr.length; i++) {
+  var product=1;
+  for(var j = 0; j < arr[0].length; j++) {
+    product = arr[i][j]*product;
+  }
+  console.log(product)
+}
+
+ 
