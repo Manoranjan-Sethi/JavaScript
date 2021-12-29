@@ -258,4 +258,52 @@ for (var i = 0; i < arr.length; i++) {
   console.log(product)
 }
 
- 
+
+//print 142536
+
+var arr = [[1,2,3],
+          [4,5,6]];
+
+var bag = "";
+for(var i=0;i<arr[0].length;i++){
+  for(var j=0;j<arr.length;j++){
+    bag+=arr[j][i];
+  }
+}
+console.log(bag);
+
+//tranpose of a matrix
+//print the above in [[1,4],
+                 // [2,5],
+                // [3,6]]
+var arr = [[1,2,3],
+          [4,5,6]];
+
+for(var i=0;i<arr.length;i++){
+  var newArr =[];
+  for(var j=0;j<arr[i].length-1;j++){
+     newArr.push(arr[j][i]);     
+  }
+  console.log(newArr);
+}
+
+
+//diagonal printing
+var matrix=[[1,2,3],
+            [4,5,6],
+            [7,8,9]];
+for(var i=0;i<matrix.length;i++){
+    for(var j=0;j<matrix.length;j++){
+        if(i==j){
+          console.log(matrix[i][j])
+        }
+    }
+}
+
+for(var i=0;i<matrix.length;i++){
+  for(var j=0;j<matrix.length;j++){
+      if(i+j==matrix.length-1){
+        console.log(matrix[i][j]);
+      }
+  }
+}

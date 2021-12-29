@@ -40,3 +40,5 @@ function checkPrime(num)
   }
 }
 console.log(checkPrime(11));
+
+
