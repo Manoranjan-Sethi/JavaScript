@@ -190,7 +190,7 @@ var alphabets = "abcdefghijklmnopqrstuvwxyz";
     for(key in obj){
         console.log(key+"-"+obj[key]);
     }
-
+console.log(z)
 //
 
 var data = {
@@ -225,3 +225,17 @@ var data = {
                   }
   }
   data.q();
+
+
+  //
+  var alphabets = "abcdefghijklmnopqrstuvwxyz";
+    
+    var x = 1;
+    
+    var obj = {};
+    
+    for (var i=0;i<alphabets.length; i++){
+        obj[alphabets[i]] = x;
+        x=x+1;
+    }
+    console.log(alphabets[i-1]);

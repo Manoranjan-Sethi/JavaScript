@@ -309,3 +309,21 @@ for(var i=0;i<matrix.length;i++){
       }
   }
 }
+
+// 
+
+var matrix=[[1,2,3],
+            [4,5,6],
+            [7,8,9]];
+
+var bag ="";
+for(var i=0; i<matrix.length;i++){
+  for(var j=matrix[0].length-1; j>=0; j--){
+      bag+=matrix[j][i]+" "
+    if(i==j){
+      bag+=matrix[i][j]+" ";
+    }
+  }
+}
+console.log(bag)
+            

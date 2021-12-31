@@ -33,5 +33,5 @@ Arrays :-
 
 Objects :-
 - intro
-- object itteration
+- object iteration
 - objects methods

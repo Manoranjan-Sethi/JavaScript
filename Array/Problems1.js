@@ -52,10 +52,14 @@ console.log(greatest_num);
 //output- [1,2,3]
 
 let arr = [1,1,1,2,2,3,3,3];
-var brr = [];
+var arr1 = [];
+let flag = arr[0];
+arr1.push(arr[0]);
 for(var i=0; i<arr.length; i++){
-  if(arr[i]==arr[i+1]){
-    brr.push(arr[i]);
+  if(flag==arr[i]){
+    continue;
   }
+  arr1.push(arr[i]);
+  flag = arr[i];
 }
-console.log(brr);
+console.log(arr1);
