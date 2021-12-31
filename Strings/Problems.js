@@ -23,3 +23,22 @@ for (var i = 0; i < catchInt; i++){
       
 }
 console.log(bag)
+
+
+//palindrome
+function isPalindrome(str){
+      let i=0;
+      let j=str.length-1;
+      let flag=true;
+      
+      while(i<j){
+          if(str[i]!=str[j]){
+              flag=false;
+              break;
+          }
+          i++;
+          j--;
+      }
+      return flag;
+  }
+  console.log(isPalindrome("racecar"));

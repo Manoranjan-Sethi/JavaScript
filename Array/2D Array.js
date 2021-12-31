@@ -279,13 +279,15 @@ console.log(bag);
 var arr = [[1,2,3],
           [4,5,6]];
 
-for(var i=0;i<arr.length;i++){
-  var newArr =[];
-  for(var j=0;j<arr[i].length-1;j++){
-     newArr.push(arr[j][i]);     
+let newArr =[];
+for(var i=0;i<arr[0].length;i++){
+  var bag = [];
+  for(var j=0;j<arr.length;j++){
+    bag.push(arr[j][i]);
   }
-  console.log(newArr);
+  newArr.push(bag)
 }
+console.log(newArr);
 
 
 //diagonal printing

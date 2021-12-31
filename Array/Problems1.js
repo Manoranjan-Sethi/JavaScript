@@ -46,3 +46,16 @@ for(var i=0; i<num.length; i++){
   }
 }
 console.log(greatest_num);
+
+
+//input- [1,1,1,2,2,3,3,3]
+//output- [1,2,3]
+
+let arr = [1,1,1,2,2,3,3,3];
+var brr = [];
+for(var i=0; i<arr.length; i++){
+  if(arr[i]==arr[i+1]){
+    brr.push(arr[i]);
+  }
+}
+console.log(brr);
