@@ -63,3 +63,16 @@ for(var i=0; i<arr.length; i++){
   flag = arr[i];
 }
 console.log(arr1);
+
+
+//appear once
+
+var arr = [3,5,3,3,8,5,6];
+for(let i=0;i<n;i++){
+  var count = 0;
+  for(let j=1;j<n;j++){
+    if(arr[j]==arr[i]){
+      count++;
+    }
+  }
+}

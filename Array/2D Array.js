@@ -326,4 +326,34 @@ for(var i=0; i<matrix.length;i++){
   }
 }
 console.log(bag)
-            
+
+
+//ind the column with maximum number of 0s.
+//input
+// 1 1 0
+// 1 1 0
+// 1 1 0
+// output
+// 2
+
+//input
+// 0 1 0
+// 0 0 1
+// 0 1 0
+// Output
+// 0
+
+var a = [[1 ,1 ,0],
+        [1 ,1, 0],
+        [1, 1, 0]]
+var arr=[];
+for(var i=0; i<a.length;i++){
+  for(var j=0; j<a.length;j++){
+    if(a[i][j]==0){
+      // console.log(a[j][i]);
+      arr.push(j)
+    }
+  }
+}
+var b=[...new Set(arr)];
+console.log(b)

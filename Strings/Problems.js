@@ -42,3 +42,26 @@ function isPalindrome(str){
       return flag;
   }
   console.log(isPalindrome("racecar"));
+
+
+
+//   You are given a string s of x and y. You need to verify whether the string follows the pattern xnyn. That is the string is valid only if equal number of ys follow equal number of xs.
+//   As an example: xxyyxxyy is valid. xy is valid. xxyyx is invalid. xxxyyyxxyyxy is valid.
+
+var a = "xyx";
+// var b =a.split("");
+// console.log(b);
+var countX = 0;
+var countY = 0;
+for(let i=0;i<a.length;i++){
+    if(a[i]=="x"){
+        countX++;
+    }if(a[i]=="y"){
+        countY++;
+    }
+}
+if(countX==countY){
+    console.log("1");
+}else{
+    console.log("0")
+}

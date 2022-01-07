@@ -128,3 +128,4 @@ for(var row = 1 ; row <= num ; row++){      //for every row run the column
   }
 console.log(); // for next line
 }
+
