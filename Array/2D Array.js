@@ -310,22 +310,45 @@ for(var i=0;i<matrix.length;i++){
   }
 }
 
-// 
+// N traversal
+
+var matrix=[[1,2,3],
+            [4,5,6],
+            [7,8,9]];
+var bag="";
+for(let i=matrix.length-1; i>=0; i--){
+    bag+=matrix[i][0]+" ";
+  }
+for(let j=1; j<matrix.length; j++){
+    bag+=matrix[j][j]+" ";
+  }
+for(let k=matrix.length-2; k>=0; k--){
+    bag+=matrix[k][matrix.length-1]+" ";
+  }
+console.log(bag);
+
+
+// Z traversal
 
 var matrix=[[1,2,3],
             [4,5,6],
             [7,8,9]];
 
+let N = matrix.length; 
 var bag ="";
-for(var i=0; i<matrix.length;i++){
-  for(var j=matrix[0].length-1; j>=0; j--){
-      bag+=matrix[j][i]+" "
-    if(i==j){
-      bag+=matrix[i][j]+" ";
-    }
+for (var i=0;i<N-1;i++) {
+    bag+=matrix[0][i]+" ";
   }
-}
-console.log(bag)
+temp = 0;
+for (var i=N-1;i>=0;i--) {
+    bag+=matrix[temp][i]+" ";
+    temp++;
+  }
+for (var i=1;i<N;i++) {
+    bag+=matrix[N-1][i]+" ";
+  }
+console.log(bag);
+
 
 
 //ind the column with maximum number of 0s.
@@ -342,7 +365,6 @@ console.log(bag)
 // 0 1 0
 // Output
 // 0
-
 var a = [[1 ,1 ,0],
         [1 ,1, 0],
         [1, 1, 0]]
