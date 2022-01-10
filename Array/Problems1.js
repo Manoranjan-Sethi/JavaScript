@@ -76,3 +76,38 @@ for(let i=0;i<n;i++){
     }
   }
 }
+
+
+//Two Sum Problem
+//brute force      TC-O(n^2)
+
+let arr = [2,5,6,9,4];
+let target = 10;
+
+let bag ="";
+
+for(let i=0; i<arr.length; i++){
+  for(let j=i+1; j<arr.length; j++){
+    if(arr[i]+arr[j]==target){
+      bag+=i+" "+j;
+    }
+  }
+}
+console.log(bag);
+
+//Optimisation in key-value with TC-O(n)
+
+let arr = [2,5,6,9,4];
+let target = 10;
+
+let values = {};
+for(let index1=0; index1<arr.length; index1++){
+  let a = arr[index1];
+  let b = target - a;
+  let index2 = values[b];
+  if(index2 != undefined){
+    console.log(index2, index1);
+  }else{
+    values[a] = index1;
+  }
+}

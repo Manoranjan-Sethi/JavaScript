@@ -239,3 +239,29 @@ var data = {
         x=x+1;
     }
     console.log(alphabets[i-1]);
+
+
+//Maximum Occurring Element
+
+var arr = [0, 2, 0, 6, 9];
+// var arr =[1,2,3,4];
+
+let items = {};
+let maxValue = 0;
+let maxCount = 0;
+
+
+for(let i of arr){
+    if(items[i]== undefined){
+    items[i]=1;
+    }else{
+        items[i]++;
+    }
+
+    if(items[i]>maxCount){
+        maxValue = i;
+        maxCount = items[i];
+    }
+}
+console.log("key :"+maxValue,"count :",maxCount);
+

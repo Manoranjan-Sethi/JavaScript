@@ -41,7 +41,7 @@ function isPalindrome(str){
       }
       return flag;
   }
-  console.log(isPalindrome("racecar"));
+  console.log(isPalindrome("abccba"));
 
 
 
@@ -64,4 +64,19 @@ if(countX==countY){
     console.log("1");
 }else{
     console.log("0")
+}
+
+// Palindrome made easy
+
+var num = 1221;
+var str = String(num);
+
+var bag = "";
+for(let i=str.length-1;i>=0;i--){
+    bag+=str[i];
+}
+if(bag==str){
+    console.log("Palindrome")
+}else{
+    console.log("Not Palindrome")
 }
