@@ -265,3 +265,15 @@ for(let i of arr){
 }
 console.log("key :"+maxValue,"count :",maxCount);
 
+
+//map every item with another
+
+var arr1 = [1,2,3,4];
+var arr2 = ["A","B","C","D"];
+
+var bag = {};
+
+for(let i=0; i<arr1.length; i++){
+    bag[arr1[i]] = arr2[i];
+}
+console.log(bag);

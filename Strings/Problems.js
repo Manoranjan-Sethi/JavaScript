@@ -41,7 +41,7 @@ function isPalindrome(str){
       }
       return flag;
   }
-  console.log(isPalindrome("abccba"));
+  console.log(isPalindrome("abccbae"));
 
 
 

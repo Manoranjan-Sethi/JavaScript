@@ -111,3 +111,23 @@ for(let index1=0; index1<arr.length; index1++){
     values[a] = index1;
   }
 }
+
+// 2 Pointers
+//works well with sorted arrays
+let arr = [2,5,6,9,11];
+let target = 20;
+
+function twoSum(arr,target){
+  let i = 0; 
+  let j = arr.length-1;
+  while(i<j){
+    if(arr[i]+arr[j]==target){
+      return {i,j}
+    }else if(arr[i]+arr[j]>target){
+      j--;
+    }else{
+      i++;
+    }
+  }
+}
+console.log(twoSum(arr,target))
