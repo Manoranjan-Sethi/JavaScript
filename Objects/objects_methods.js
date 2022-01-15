@@ -144,11 +144,11 @@ console.log(output);
 
 
 //in objects we know that we cant have two keys same 
-var name1 = "masaia";
+var name1 = "masai";
 var output = {}; 
 
 for(var i=0; i<name1.length; i++){
-    var char = name1[i]; // at first name1 will be of 0th index which is stored in char i.e. "m"
+    var char = name1[i];            // at first name1 will be of 0th index which is stored in char i.e. "m"
 
     if(output[char] == undefined){  //when the object is empty, here output["m"] is undefined so 1 will get stored there
         output[char] = 1;
@@ -241,9 +241,9 @@ var data = {
     console.log(alphabets[i-1]);
 
 
-//Maximum Occurring Element
 
-var arr = [0, 2, 0, 6, 9];
+//Maximum Occurring Element
+var arr = [0, 2, 0, 6, 9];  // 0 - 2
 // var arr =[1,2,3,4];
 
 let items = {};
@@ -277,3 +277,91 @@ for(let i=0; i<arr1.length; i++){
     bag[arr1[i]] = arr2[i];
 }
 console.log(bag);
+
+//find unique elements
+var arr = [1,1,1,2,2,3,3,3,4,4,5]
+
+let i = 0;
+let j = 1;
+while(i<arr.length && j<arr.length){
+    while(arr[j]==arr[i]){
+        j++;
+    }
+    if(j>=arr.length){
+        break;
+    }
+    i++;
+    arr[i]=arr[j]
+}
+//unique elements printing
+for(let k=0; k<=i; k++){
+    console.log(arr[k])
+}
+
+//sum of Arrays
+// input
+// 5
+// 1 2 3 4 5
+
+// output
+// 1 3 6 10 15 
+
+// index - 0->{1 = 1}
+// index - 1->{1 + 2 = 3}
+// index - 2->{1 + 2 + 3 = 6}
+// index - 3->{1 + 2 + 3 + 4 = 10}
+// index - 4->{1 + 2 + 3 + 4 + 5 = 15}
+
+var arr = [1,2,3,4,5]
+var newArr = [];
+var sum = 0;
+
+for(let i=0; i<arr.length; i++){
+    sum+=arr[i];
+    newArr.push(sum);
+}
+console.log(newArr);
+
+
+// reverse array
+// input
+// [1,2,3,4,5]
+
+// output
+// [5,4,3,2,1]
+
+let arr = [1,2,3,4,5]
+let revArr = [];       //this is taking some extra space
+
+let i = arr.length-1;
+while(i>=0){
+    revArr.push(arr[i])
+    i--;
+}
+console.log(revArr)
+
+
+//without taking extra space
+//we need to swap the digits by taking 2 pointers
+
+function swap(arr,a,b){
+    let temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+    return arr;
+}
+
+function reverseArr(arr){
+    let i = 0;
+    let j = arr.length-1;
+    while(i<j){
+        swap(arr,i,j);
+        i++;
+        j--;
+    }
+    return arr;
+}
+console.log(reverseArr([1,2,3,4,5]))
+
+
+//Rotate the array

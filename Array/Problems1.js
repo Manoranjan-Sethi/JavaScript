@@ -84,16 +84,15 @@ for(let i=0;i<n;i++){
 let arr = [2,5,6,9,4];
 let target = 10;
 
-let bag ="";
 
-for(let i=0; i<arr.length; i++){
+for(let i=0; i<arr.length-1; i++){
   for(let j=i+1; j<arr.length; j++){
     if(arr[i]+arr[j]==target){
-      bag+=i+" "+j;
+      console.log(i,j);
     }
   }
 }
-console.log(bag);
+
 
 //Optimisation in key-value with TC-O(n)
 
@@ -122,12 +121,13 @@ function twoSum(arr,target){
   let j = arr.length-1;
   while(i<j){
     if(arr[i]+arr[j]==target){
-      return {i,j}
+      break;
     }else if(arr[i]+arr[j]>target){
       j--;
     }else{
       i++;
     }
   }
+  console.log(i,j);
 }
-console.log(twoSum(arr,target))
+twoSum(arr,target)
