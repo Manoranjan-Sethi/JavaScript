@@ -223,7 +223,7 @@ for(let i = 0; i<N-k; i++){
 console.log(newArr)
 
 
-//optimisation-2
+//optimisation
 //TC-O(n) SC-O(1)
 function swap(arr,a,b){
     let temp = arr[a];
@@ -267,3 +267,49 @@ for(i=0;i<K;i++){
     arr.unshift(arr.pop())
 }
 console.log(arr)
+
+
+//sliding window
+
+//find the sum of all the subarray of a size
+
+//size = 3
+//input - [1,2,3,4,2,1,7,5,3]
+
+//brute force TC-O(NxK)
+arr = [1,2,3,4,5];
+k = 3;
+N = 5;
+
+for(let i=0; i<=N-k; i++){
+  let sum = 0;
+  for(let j=i; j<i+k; j++){
+    sum+=arr[j];
+  }
+  console.log(sum)
+}
+
+//optimisation  TC-O(N)
+arr = [1,2,3,4,5];
+k = 3;
+N = 5;
+
+function takeOutMax(arr,k){
+  let sum = 0;
+  let max = 0;
+  for(let i=0; i<k; i++){
+    sum = sum+arr[i]
+  }
+  if(sum>max){
+    max = sum;
+  }
+  for(let i=k; i<N; i++){
+    sum = sum + arr[i];
+    sum = sum - arr[i-k];
+    if(sum>max){
+      max = sum;
+    }
+  }
+  return max;
+}
+console.log(takeOutMax(arr,k))

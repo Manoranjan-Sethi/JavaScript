@@ -27,9 +27,15 @@ Arrays :-
 - For in loop
 - Array destructuring
 - 2D Array
+- Brute Force
+- Optimization Techniques
+- 2 Pointers
+- Sliding Window
 - Problems
 - Methods
 
+Strings :-
+- Problems
 
 Objects :-
 - intro
