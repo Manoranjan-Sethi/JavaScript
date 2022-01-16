@@ -131,3 +131,139 @@ function twoSum(arr,target){
   console.log(i,j);
 }
 twoSum(arr,target)
+
+// 2 Pointers
+
+//sum of Arrays
+// input
+// 5
+// 1 2 3 4 5
+
+// output
+// 1 3 6 10 15 
+
+// index - 0->{1 = 1}
+// index - 1->{1 + 2 = 3}
+// index - 2->{1 + 2 + 3 = 6}
+// index - 3->{1 + 2 + 3 + 4 = 10}
+// index - 4->{1 + 2 + 3 + 4 + 5 = 15}
+
+var arr = [1,2,3,4,5]
+var sum = 0;
+
+for(let i=1; i<arr.length; i++){
+    arr[i]=arr[i]+arr[i-1];
+}
+console.log(arr.join(" "));
+
+
+// reverse array
+// input
+// [1,2,3,4,5]
+
+// output
+// [5,4,3,2,1]
+
+let arr = [1,2,3,4,5]
+let revArr = [];       //this is taking some extra space
+
+let i = arr.length-1;
+while(i>=0){
+    revArr.push(arr[i])
+    i--;
+}
+console.log(revArr)
+
+
+//without taking extra space
+//we need to swap the digits by taking 2 pointers
+
+function swap(arr,a,b){
+    let temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+    return arr;
+}
+
+function reverseArr(arr){
+    let i = 0;
+    let j = arr.length-1;
+    while(i<j){
+        swap(arr,i,j);
+        i++;
+        j--;
+    }
+    return arr;
+}
+console.log(reverseArr([1,2,3,4,5]))
+
+
+//Rotate the array K times
+
+// input
+// [1,2,3,4,5]
+// k = 2
+// output
+// [4,5,1,2,3]
+
+
+//Brute Force
+//TC-O(n) SC-O(n)
+let arr = [1,2,3,4,5];
+k = 2 //rotate
+N = 5 //size of arr
+
+let newArr = []
+for(let i = N-k; i<N; i++){
+  newArr.push(arr[i])
+}
+for(let i = 0; i<N-k; i++){
+  newArr.push(arr[i])
+}
+console.log(newArr)
+
+
+//optimisation-2
+//TC-O(n) SC-O(1)
+function swap(arr,a,b){
+    let temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+    return arr;
+}
+
+function reverseArr(arr,start,end){
+    left = start;
+    right = end;
+    while(left < right){
+        swap(arr,left,right);              
+        left++;
+        right--;
+    }
+    return arr;
+}
+arr = [1,2,3,4,5];
+K = 7;  //times which we have to rotate
+N = 5;  //size of array
+
+K = K % N; //2
+
+
+reverseArr(arr,0,N-1)  //reverse the whole array  //[5 4 3 2 1]
+reverseArr(arr,0,K-1)  //[4,5]
+reverseArr(arr,K,N-1)  // [1,2,3]
+console.log(arr)
+
+
+//alternative way to rotate
+  
+arr = [1,2,3,4,5];
+K = 7;  //times which we have to rotate
+N = 5;  //size of array
+
+K = K % N; //2
+
+for(i=0;i<K;i++){
+    arr.unshift(arr.pop())
+}
+console.log(arr)
