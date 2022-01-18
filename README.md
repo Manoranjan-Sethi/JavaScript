@@ -41,3 +41,7 @@ Objects :-
 - intro
 - object iteration
 - objects methods
+
+Sorting :-
+- Selection sort
+- Bubble sort

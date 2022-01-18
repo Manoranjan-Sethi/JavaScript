@@ -132,8 +132,6 @@ function twoSum(arr,target){
 }
 twoSum(arr,target)
 
-// 2 Pointers
-
 //sum of Arrays
 // input
 // 5
@@ -313,3 +311,16 @@ function takeOutMax(arr,k){
   return max;
 }
 console.log(takeOutMax(arr,k))
+
+
+let arr = [1,3,2,5,1];
+N = 5; 
+k = 3;
+x = 2;   //slide length 
+for(let i=0; i<=N-x; i++){
+  var bag = "";
+  for(let j=i; j<i+x; j++){
+    bag += arr[j];
+  }
+  console.log(bag);
+}
