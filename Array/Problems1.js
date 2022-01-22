@@ -312,10 +312,9 @@ function takeOutMax(arr,k){
 }
 console.log(takeOutMax(arr,k))
 
-
+//all the elements of size k
 let arr = [1,3,2,5,1];
 N = 5; 
-k = 3;
 x = 2;   //slide length 
 for(let i=0; i<=N-x; i++){
   var bag = "";

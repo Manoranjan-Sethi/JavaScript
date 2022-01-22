@@ -190,7 +190,6 @@ var alphabets = "abcdefghijklmnopqrstuvwxyz";
     for(key in obj){
         console.log(key+"-"+obj[key]);
     }
-console.log(z)
 //
 
 var data = {
@@ -297,3 +296,22 @@ while(i<arr.length && j<arr.length){
 for(let k=0; k<=i; k++){
     console.log(arr[k])
 }
+
+
+var arr = [9,5,8,6]
+
+var obj = {};
+for(let i=0; i<arr.length; i++){
+    if(obj[arr[i]]==undefined){
+        obj[arr[i]]=i
+    }
+}
+var arr1 = []
+for(key in obj){
+    console.log(key,obj[key])
+    arr1.push(obj[key])
+}
+console.log(arr1.join(" "))
+
+// let arr1 = arr.sort((a,b)=>a-b)
+// console.log(arr1)
