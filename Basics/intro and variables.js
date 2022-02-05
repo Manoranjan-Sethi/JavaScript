@@ -1,4 +1,3 @@
-
 "use strict";
 //  This command prints output
 console.log("Hello World!");

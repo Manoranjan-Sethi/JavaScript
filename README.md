@@ -45,3 +45,10 @@ Objects :-
 Sorting Algos:-
 - Selection sort
 - Bubble sort
+
+Recursion:-
+- Factorial
+- Array iteration
+- Fibonacci Series
+- Follow the knight
+- Number of ways

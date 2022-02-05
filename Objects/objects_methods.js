@@ -241,28 +241,7 @@ var data = {
 
 
 
-//Maximum Occurring Element
-var arr = [0, 2, 0, 6, 9];  // 0 - 2
-// var arr =[1,2,3,4];
 
-let items = {};
-let maxValue = 0;
-let maxCount = 0;
-
-
-for(let i of arr){
-    if(items[i]== undefined){
-    items[i]=1;
-    }else{
-        items[i]++;
-    }
-
-    if(items[i]>maxCount){
-        maxValue = i;
-        maxCount = items[i];
-    }
-}
-console.log("key :"+maxValue,"count :",maxCount);
 
 
 //map every item with another

@@ -47,6 +47,30 @@ for(var i=0; i<num.length; i++){
 }
 console.log(greatest_num);
 
+//Maximum Occurring Element
+var arr = [2,2,1,1,1,2,2];  
+// var arr =[1,2,3,4];
+
+let items = {};
+let maxValue = 0;
+let maxCount = 0;
+
+
+for(let i of arr){
+    if(items[i]== undefined){
+    items[i]=1;
+    }else{
+        items[i]++;
+    }
+
+    if(items[i]>maxCount){
+        maxValue = i;
+        maxCount = items[i];
+    }
+}
+console.log("key :"+maxValue,"count :",maxCount);
+
+
 
 //input- [1,1,1,2,2,3,3,3]
 //output- [1,2,3]

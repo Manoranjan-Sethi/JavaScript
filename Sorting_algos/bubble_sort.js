@@ -17,3 +17,18 @@ function bubbleSort(arr){
 }
 
 console.log(bubbleSort([8,5,3,2,1,0,4]))
+
+var $a = 4;
+console.log("4"/"2");
+
+let a ;
+let b=4;
+let x= a??b
+console.log(x)
+
+
+let i=0;
+do{
+  console.log(i);
+  i++
+}while(i>3)
