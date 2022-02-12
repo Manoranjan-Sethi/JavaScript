@@ -58,3 +58,51 @@ console.log(user);
 //array commands
 var arr = user["marks"];
 console.log(arr.length);
+
+
+
+// Property
+let obj = {};
+let arr = [1,2,3,4];
+obj.array = arr;
+console.log(obj);
+
+obj.name = "Handa Himansu";
+console.log(obj);
+
+//prototypal inheritance
+function xClass(){
+  this.name = "Handa";
+  this.sayName = function(){
+    console.log(this.name)
+  }
+}
+//new object
+let example = new xClass();
+example.sayName();
+
+
+//using .prototype
+
+function aClass(){
+  this.array = [1,2,3,4];
+  this.name = "javaScript";
+}
+//new object
+let ex = new aClass();
+
+aClass.prototype.sayName = function(){
+  console.log(this.name);
+}
+ex.sayName();
+
+
+// constructors and variables 
+
+function class1(name,age){
+  this.name = name;
+  this.age = age;
+}
+
+let print = new class1("Mike", 29);
+console.log(print)
