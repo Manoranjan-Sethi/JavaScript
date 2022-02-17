@@ -8,7 +8,7 @@ function push(data){
   arr[top] = data;
 }
 
-function pop(data){
+function pop(){
 
   if(top == -1){
     return empty;
@@ -31,4 +31,5 @@ arr.push(6);
 console.log(arr);
 arr.pop();
 arr.pop();
+arr.peek();
 console.log(arr);
