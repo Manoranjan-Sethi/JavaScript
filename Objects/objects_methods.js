@@ -277,3 +277,17 @@ console.log(arr1); //ascending order
 
 let arr1 = arr.sort((a, b) => b - a);
 console.log(arr1); //decending order
+
+//same but with map
+var obj = {};
+arr.map((e) => (!obj[e] ? (obj[e] = 1) : obj[e]++));
+
+//////
+var obj = {};
+for (let i = 0; i < arr.length; i++) {
+  if (obj[arr[i]] == undefined) {
+    obj[arr[i]] = 1;
+  } else {
+    obj[arr[i]]++;
+  }
+}
