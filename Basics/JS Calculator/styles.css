@@ -1,0 +1,38 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.last-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  margin: 7px;
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 15px;
+  width: 55px;
+}
+
+input {
+  font-size: 16px;
+  margin-bottom: 20px;
+  border: 1.5px solid black;
+}
+
+.clear {
+  padding: 5px;
+  margin-bottom: 30px;
+}
