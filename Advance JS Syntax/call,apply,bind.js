@@ -15,14 +15,11 @@ sayWelcome.call(p1, "Welcome");
 sayWelcome.call(p2, "Welcome");
 
 // apply - same as call but takes array as a parameter
-function sayWelcome(greeting) {
-  console.log(greeting + " " + this.firstName + " " + this.lastName);
-}
+
 sayWelcome.apply(p1, ["Welcome"]);
 sayWelcome.apply(p2, ["Welcome"]);
 
 // bind - creates a copy of a function with new value of this
-
 function sayWelcome() {
   console.log("Welcome " + this.firstName + " " + this.lastName);
 }

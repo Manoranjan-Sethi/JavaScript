@@ -11,14 +11,14 @@ var sum = function (a, b, c) {
   };
 };
 var keep = sum(1, 2, 3);
-console.log(keep.getSumTwo());
-console.log(keep.getSumThree());
+console.log(keep.getSumTwo()); //3
+console.log(keep.getSumThree()); //6
 
-// function init() {
-//   var name = "Mozilla";
-//   function displayName() {
-//     console.log(name);
-//   }
-//   displayName();
-// }
-// init();
+function init() {
+  var name = "Mozilla";
+  function displayName() {
+    console.log(name);
+  }
+  displayName();
+}
+init();
