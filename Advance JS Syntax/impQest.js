@@ -61,4 +61,51 @@ console.error(typeof typeof 1); // as the typeof 1 is number and type of number 
 
 let arr = [1, 4, 7];
 arr[9] = 5;
-console.error(arr);
+console.error(arr); //[ 1, 4, 7, <6 empty items>, 5 ]
+
+// Hoisting
+
+console.log(a); //undefined
+var am = 5;
+
+console.log(b); //Cannot access 'a' before initialization
+let be = 5;
+
+//array reverse
+
+let str = "aldfe";
+let atr = str.split("").reverse().join("");
+console.log(atr);
+
+//rest opertator
+//rest with array
+function add(a, b, c, ...args) {
+  console.log(args);
+  return a + b + c + args[0] + args[1];
+}
+
+var ans = add(1, 4, 7, 2, 8);
+console.log(ans);
+
+//rest with object
+var students = {
+  name: "akash",
+  age: "23",
+  hobbies: ["singing", "dancing"],
+};
+const { age, ...ans } = students;
+console.log(ans);
+console.log(students);
+//spread operator
+
+let aq = [1, 2, 3];
+let bq = [4, 5, 6];
+let c = [...aq, ...bq];
+console.log(c);
+
+var at = 9;
+function test() {
+  console.log(a);
+  var at = 6;
+}
+test(); //undefined
