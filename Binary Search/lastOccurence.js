@@ -1,20 +1,19 @@
-// lowerBound/ First Occurence
-
-// what is the first index the number occuring
+//last occurence of a number
 
 let arr = [0, 2, 2, 3, 5, 5, 5, 7, 8, 9];
-k = 2; //op - 3
+k = 5; //op - 6
 
-function firstOccurence(arr, k) {
+function lastOccurence(arr, k) {
   let low = 0;
   let high = arr.length - 1;
   let result = -1;
+
   while (low <= high) {
     let mid = Math.floor(low + (high - low) / 2);
 
     if (arr[mid] == k) {
       result = mid;
-      high = mid - 1;
+      low = mid + 1;
     } else if (arr[mid] < k) {
       low = mid + 1;
     } else {
@@ -24,4 +23,4 @@ function firstOccurence(arr, k) {
   return result;
 }
 
-console.log(firstOccurence(arr, k));
+console.log(lastOccurence(arr, k));
