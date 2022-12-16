@@ -1,23 +1,25 @@
-let arr = [2, 6, 4, 1, 9, 17, 3, 5, 8];
-t = 21;
+let arr = [-4, 1, 3, -2, -1];
+sum = 0;
 
-function opt(arr, t) {
+function opt(arr, sum) {
   arr = arr.sort((a, b) => a - b);
   for (let i = 0; i < arr.length - 2; i++) {
     let j = i + 1;
     let k = arr.length - 1;
 
     while (j < k) {
-      if (arr[i] + arr[j] + arr[k] == t) {
-        return { i, j, k }; // after sort the postion is this
-      } else if (arr[i] + arr[j] + arr[k] < t) {
+      if (arr[i] + arr[j] + arr[k] == sum) {
+        console.log(arr[i], arr[j], arr[k]);
+        return;
+      } else if (arr[i] + arr[j] + arr[k] < sum) {
         i++;
       } else {
         j--;
       }
     }
-    return false;
+    console.log(false);
+    return;
   }
 }
 
-console.log(opt(arr, t));
+opt(arr, sum);

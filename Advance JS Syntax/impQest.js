@@ -142,7 +142,7 @@ console.log(foo()); //8
 
 var y = false - true;
 console.log(y); // -1
-var z = 1 - "1";
+var z = "1" - 1; // var z = 1 - "1"
 console.log(z); // 0
 var qw = true && "abc";
 console.log(qw); // abc
