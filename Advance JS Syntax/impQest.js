@@ -7,7 +7,7 @@ let obj1 = {
 let obj2 = obj1;
 obj1.name = "Jolly";
 
-console.log(obj2); //{ name: 'Jolly' }   as both objects share the same reference to the momery
+console.log(obj2); //{ name: 'Jolly' }   as both objects share the same reference to the memory
 
 //type
 
@@ -65,10 +65,10 @@ console.error(arr); //[ 1, 4, 7, <6 empty items>, 5 ]
 
 // Hoisting
 
-console.log(a); //undefined
+console.log(am); //undefined
 var am = 5;
 
-console.log(b); //Cannot access 'a' before initialization
+console.log(be); //Cannot access 'a' before initialization
 let be = 5;
 
 //array reverse
@@ -105,7 +105,7 @@ console.log(c);
 
 var at = 9;
 function test() {
-  console.log(a);
+  console.log(at);
   var at = 6;
 }
 test(); //undefined
