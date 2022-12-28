@@ -12,9 +12,9 @@ console.log(obj2); //{ name: 'Jolly' }   as both objects share the same referenc
 //type
 
 let a = 5;
-let b = new Number(7); // b is a object
+let b = new Number(5); // b is a object
 
-console.log(a == b); // false
+console.log(a == b); // true
 console.log(a === b); // false
 
 console.log([1, 2] == [1, 2]); // false
@@ -25,7 +25,7 @@ console.log([1, 2] === [1, 2]); // false
 let sum = (a, b) => {
   return a + b;
 };
-console.log(sum(2, "4"));
+console.log(sum(2, "4")); //24
 
 //increment decrement
 
@@ -53,7 +53,7 @@ function call() {
   return (() => 1)();
 }
 
-console.error(typeof call());
+console.error(typeof call()); //number
 
 console.error(typeof typeof 1); // as the typeof 1 is number and type of number is string
 
@@ -109,3 +109,40 @@ function test() {
   var at = 6;
 }
 test(); //undefined
+
+x(); // due to hoisting x is undefined and gives  x is not a function
+var x = function () {
+  console.log("Hello world");
+};
+
+const obj1 = {
+  a: "Mano",
+  b: {
+    a: "Arpit",
+    getName: function () {
+      return this.a;
+    },
+  },
+};
+console.log(obj1.b.getName()); // Arpit
+console.log(obj1.b.getName.call(obj1)); //Mano
+
+function foo() {
+  function bar() {
+    return 3;
+  }
+  return bar();
+  function bar() {
+    //as both the function bar name is common so bar gets overwritten
+    return 8;
+  }
+}
+// alert(foo());
+console.log(foo()); //8
+
+var y = false - true;
+console.log(y); // -1
+var z = 1 - "1";
+console.log(z); // 0
+var qw = true && "abc";
+console.log(qw); // abc
