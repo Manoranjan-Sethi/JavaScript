@@ -2,7 +2,7 @@
 
 //normal function
 function add(a, b) {
-  console.log(arguments);
+  console.log(arguments); //[Arguments] { '0': 2, '1': 8 }
   return a + b;
 }
 
@@ -23,7 +23,7 @@ sum(2, 8);
 var obj = {
   name: "Ana",
   print: function () {
-    console.log(`My name is ${this.name}`);
+    console.log(`My name is ${this.name}`); //My name is Ana
   },
 };
 obj.print();
@@ -41,12 +41,12 @@ obj.print();
 //3. implicit retun in arrow functions
 
 //normal function
-function get() {
+const amy = function () {
   700;
-}
-console.log(get()); // undefined
+};
+console.log(amy()); // undefined
 
 //arrow function
 
 const get = () => 188;
-console.log(get());
+console.log(get()); //188
